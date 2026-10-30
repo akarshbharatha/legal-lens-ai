@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Reference AI - Find Similar Cases with AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='modern.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-landing">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon-bg">
+                    <span class="logo-icon">⚖</span>
+                </div>
+                <span class="logo-text">LegalAI</span>
+            </div>
+            <div class="nav-buttons">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="/search" class="nav-btn-primary">Search Cases</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <div class="hero-badge">🤖 Powered by GPT-4o-mini</div>
+            <h1 class="hero-headline">Transform Your Legal Research</h1>
+            <p class="hero-description">AI-powered platform to find similar legal cases, predict outcomes, and access comprehensive case analysis in seconds. Built for lawyers, researchers, and legal professionals.</p>
+            <div class="hero-cta">
+                <a href="#demo" class="cta-primary">Start Searching Free</a>
+                <a href="#features" class="cta-secondary">Learn More</a>
+            </div>
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">200+</div>
+                    <div class="trust-label">Cases Database</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">95%</div>
+                    <div class="trust-label">Accuracy</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">2.5s</div>
+                    <div class="trust-label">Avg. Search Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why LegalAI?</h2>
+                <p class="section-subtitle">Advanced AI technology meets legal expertise</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🔬</div>
+                    </div>
+                    <h3>Smart Case Matching</h3>
+                    <p>Advanced TF-IDF algorithms analyze thousands of cases to find the most relevant precedents based on your case description.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🤖</div>
+                    </div>
+                    <h3>AI Verdict Prediction</h3>
+                    <p>Get AI-powered predictions with win probability scores, detailed reasoning, and strategic legal insights powered by GPT-4o-mini.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">✂️</div>
+                    </div>
+                    <h3>Auto Summarization</h3>
+                    <p>Automatically extract key points from your case study to improve search accuracy and provide concise case summaries.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📊</div>
+                    </div>
+                    <h3>Detailed Analysis</h3>
+                    <p>Receive comprehensive analysis including legal issues, applicable laws, strengths, weaknesses, and recommended strategies.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📄</div>
+                    </div>
+                    <h3>Full Case Access</h3>
+                    <p>View complete case documents in PDF format directly in your browser. No downloads or external tools required.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">⚡</div>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Search and analyze cases in milliseconds. No waiting, no delays. Get instant results powered by optimized algorithms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">From case study to verdict prediction in 4 simple steps</p>
+            </div>
+
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-visual">
+                        <div class="step-number">01</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Describe Your Case</h3>
+                        <p>Enter your legal case study in detail. The system will automatically analyze and summarize the key points.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-visual">
+                        <div class="step-number">02</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our GPT-4o-mini powered system analyzes your case and provides verdict predictions with win probability scores.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-visual">
+                        <div class="step-number">03</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Review Similar Cases</h3>
+                        <p>Browse the top 5 most relevant cases with detailed similarity scores and match percentage.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-visual">
+                        <div class="step-number">04</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Access Full Documents</h3>
+                        <p>Click to view complete case PDFs for comprehensive reference and deeper legal research.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo/CTA Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="demo-box">
+                <div class="demo-header">
+                    <h2>Ready to Transform Your Legal Research?</h2>
+                    <p>Join thousands of legal professionals using AI to find case precedents faster</p>
+                </div>
+                <div class="demo-buttons">
+                    <a href="/search" class="btn-demo-primary">Go to Search Interface</a>
+                    <a href="#features" class="btn-demo-secondary">View Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">⚖ LegalAI</div>
+                    <p>AI-powered legal case reference system for modern legal professionals.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Technology</h4>
+                    <ul>
+                        <li>TF-IDF Algorithm</li>
+                        <li>Cosine Similarity</li>
+                        <li>GPT-4o-mini AI</li>
+                        <li>Extractive Summarization</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Try Now</a></li>
+                        <li><a href="/search">Search Interface</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>About</h4>
+                    <p>Developed for legal case research using advanced NLP and AI technologies.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LegalAI. All rights reserved. Powered by TF-IDF, NLP & GPT-4o-mini</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

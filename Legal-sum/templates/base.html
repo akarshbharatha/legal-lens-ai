@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LegalAI{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='modern.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    {% block content %}{% endblock %}
+
+    <!-- 🔹 GLOBAL CHATBOT -->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChat()">
+            💬 Legal AI Assistant
+        </div>
+
+        <div id="chatbot-body">
+            <div id="chat-messages"></div>
+
+            <div id="chat-input">
+                <input type="text" id="userMessage" placeholder="Ask a legal question..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #chatbot-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 330px;
+            font-family: 'Inter', sans-serif;
+            z-index: 9999;
+        }
+
+        #chatbot-header {
+            background: #111827;
+            color: white;
+            padding: 12px;
+            border-radius: 12px 12px 0 0;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        #chatbot-body {
+            display: none;
+            background: white;
+            border: 1px solid #e5e7eb;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 0 12px 12px;
+        }
+
+        #chat-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+
+        .user {
+            text-align: right;
+            margin: 8px 0;
+            color: #2563eb;
+        }
+
+        .bot {
+            text-align: left;
+            margin: 8px 0;
+            color: #111827;
+        }
+
+        #chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        #chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        #chat-input button {
+            padding: 10px 14px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function toggleChat() {
+            const body = document.getElementById("chatbot-body");
+            body.style.display = body.style.display === "none" ? "flex" : "none";
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("userMessage");
+            const message = input.value.trim();
+            if (!message) return;
+
+            const chat = document.getElementById("chat-messages");
+            chat.innerHTML += `<div class="user">${message}</div>`;
+            input.value = "";
+
+            fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message })
+            })
+            .then(res => res.json())
+            .then(data => {
+                chat.innerHTML += `<div class="bot">${data.reply}</div>`;
+                chat.scrollTop = chat.scrollHeight;
+            });
+        }
+    </script>
+
+</body>
+</html>

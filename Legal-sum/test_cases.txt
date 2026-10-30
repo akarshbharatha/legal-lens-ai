@@ -1,0 +1,35 @@
+Sample Legal Test Cases for Testing the Application
+====================================================
+
+TEST CASE 1: Contract Breach
+-----------------------------
+A software development company entered into a contract with a client to develop a custom application within six months. The company failed to deliver the application on time and requested additional payment for the delay. The client refused to pay extra compensation and filed a case for breach of contract and damages. The court needs to determine whether the company breached the contract and what compensation the client is entitled to receive.
+
+TEST CASE 2: Property Dispute
+-------------------------------
+Two brothers inherited ancestral property from their father. One brother claimed that he was the sole owner of the property based on a will, while the other brother claimed the property should be equally divided. The disputed property included a residential house and agricultural land. Both parties submitted documents to support their claims, but there were inconsistencies in the documentation. The court must determine the rightful ownership and distribution of the property.
+
+TEST CASE 3: Employment Termination
+------------------------------------
+An employee was terminated from his position at a manufacturing company for alleged misconduct. The employee claims he was wrongfully terminated without a proper investigation and that the company violated employment laws. The company argues that the termination was justified due to repeated violations of company policies. The employee seeks reinstatement and compensation for wrongful termination. The court needs to examine the evidence and determine if the termination was lawful.
+
+TEST CASE 4: Insurance Claim Denial
+------------------------------------
+A business owner purchased fire insurance for his warehouse and inventory. When a fire destroyed part of the warehouse and inventory, the insurance company denied the claim, citing failure to disclose certain risk factors. The business owner disputes this and claims that the insurance company is acting in bad faith to avoid payment. The amount in dispute is significant and includes loss of inventory, property damage, and business interruption costs.
+
+TEST CASE 5: Consumer Protection
+---------------------------------
+A consumer purchased a defective electronic device from a retailer. Despite multiple complaints and service requests within the warranty period, the device continued to malfunction. When the consumer demanded a replacement or full refund, the retailer refused and offered only a partial refund. The consumer filed a complaint under consumer protection laws seeking full compensation for the defective product and mental harassment caused by the dispute.
+
+TEST CASE 6: Inheritance Dispute
+----------------------------------
+A family is disputing the distribution of assets after the death of the family patriarch. The deceased had multiple children from different marriages, and the family disputes the validity of different wills. Some family members claim that undue influence was exerted on the deceased, while others claim the will is authentic. The estate includes substantial assets including real estate, bank accounts, and investments. The court must determine which will is valid and how the estate should be distributed among all legal heirs.
+
+TEST CASE 7: Criminal Appeal
+-----------------------------
+A person was convicted of theft and sentenced to imprisonment. The accused is appealing the conviction on grounds that evidence was mishandled, proper legal procedures were not followed during the investigation, and the prosecution failed to prove guilt beyond reasonable doubt. The defense argues that key witnesses were coerced and that the trial court made errors in judgment. The appellate court must review all evidence and legal procedures to determine if the conviction should be upheld or overturned.
+
+TEST CASE 8: Land Acquisition
+------------------------------
+The government acquired agricultural land from farmers for a development project under the land acquisition act. The farmers dispute the compensation amount offered, claiming it is significantly below market value and that the acquisition violates their constitutional rights. They also claim that the acquisition process did not follow proper procedures and that adequate notice was not provided. The farmers seek fair compensation and challenge the validity of the acquisition process in court.
+

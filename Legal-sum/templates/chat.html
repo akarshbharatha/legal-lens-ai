@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Legal Chatbot</title>
+</head>
+<body>
+    <h2>Legal AI Chatbot</h2>
+
+    <input type="text" id="msg" placeholder="Ask something..." />
+    <button onclick="sendMessage()">Send</button>
+
+    <p id="reply"></p>
+
+    <script>
+        function sendMessage() {
+    const input = document.getElementById("userMessage");
+    const message = input.value.trim();
+    if (!message) return;
+
+    const chat = document.getElementById("chat-messages");
+
+    chat.innerHTML += `<div class="user">${message}</div>`;
+    input.value = "";
+
+    fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+    })
+    .then(res => res.json())
+    .then(data => {
+        let html = `<div class="bot"><strong>${data.title}</strong><ul>`;
+        data.sections.forEach(sec => {
+            html += `<li><b>${sec.title}:</b> ${sec.description}</li>`;
+        });
+        html += "</ul></div>";
+
+        chat.innerHTML += html;
+        chat.scrollTop = chat.scrollHeight;
+    })
+    .catch(() => {
+        chat.innerHTML += `<div class="bot">⚠️ Error connecting to server.</div>`;
+    });
+}
+
+
+    </script>
+</body>
+</html>

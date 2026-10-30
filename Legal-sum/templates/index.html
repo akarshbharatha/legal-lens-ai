@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Legal Case Reference Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='modern.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="search-page">
+        <!-- Simple Header -->
+        <header class="search-header">
+            <div class="header-content">
+                <div class="header-logo">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">LegalAI Search</span>
+                </div>
+                <a href="/" class="back-btn">← Back to Home</a>
+            </div>
+        </header>
+
+        <!-- Search Interface -->
+        <div class="search-container">
+            <div class="search-title-section">
+                <h1>Legal Case Reference Finder</h1>
+                <p>Enter your case study below to find similar cases and get AI-powered analysis</p>
+            </div>
+
+            <div class="input-section">
+                <div class="input-toggle">
+                    <button class="input-mode-btn active" data-mode="text">📝 Text Input</button>
+                    <button class="input-mode-btn" data-mode="pdf">📄 Upload PDF</button>
+                </div>
+
+                <div id="textInputSection">
+                    <textarea 
+                        id="caseStudy" 
+                        placeholder="Enter your case study description here...&#10;&#10;Example: A case involving breach of contract where the defendant failed to deliver goods as per the agreed terms. The contract specified delivery within 30 days but the defendant delayed by 45 days, causing financial losses to the plaintiff."
+                        rows="8"
+                    ></textarea>
+                </div>
+
+                <div id="pdfInputSection" style="display: none;">
+                    <input 
+                        type="file" 
+                        id="pdfFile" 
+                        accept=".pdf"
+                        class="pdf-input"
+                    >
+                    <p class="file-hint">Select a PDF file to extract and analyze</p>
+                </div>
+
+                <button id="searchBtn" class="btn-search">🔍 Find Similar Cases</button>
+            </div>
+
+            <div id="summarySection" style="display: none;">
+                <h2>📋 Case Summary</h2>
+                <div class="summary-box">
+                    <div class="summary-content" id="summaryBox"></div>
+                </div>
+            </div>
+
+            <div id="aiAnalysisSection" style="display: none;">
+                <h2>🤖 AI Legal Analysis & Verdict Prediction</h2>
+                <div id="aiAnalysisContainer"></div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>🔍 Similar Cases Found</h2>
+                <div id="resultsContainer"></div>
+            </div>
+
+            <div id="loadingIndicator" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing your request...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="search-footer">
+            <p>&copy; 2024 LegalAI | Powered by TF-IDF, NLP & GPT-4o-mini</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
